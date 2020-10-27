@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon ./src/index.js",
     "start": "node ./src/index.js"
   },
   "heroku-run-build-script": true,
@@ -20,7 +19,6 @@
   "homepage": "https://github.com/emlabollita/node-model-viewer#readme",
   "dependencies": {
     "ejs": "^3.1.5",
-    "express": "^4.17.1",
-    "nodemon": "^2.0.6"
+    "express": "^4.17.1"
   }
 }
