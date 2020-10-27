@@ -1,0 +1,47 @@
+<html>
+  <%- include('partials/header') %>
+  <body>
+    <h1>Ejemplo de Model Viewer con Realidad Aumentada</h1>
+    <model-viewer
+      src="./assets/models/batman.glb"
+      auto-rotate
+      camera-controls
+      ar
+      skybox-image="./assets/img/spruit_sunrise_1k_HDR.hdr"
+      shadow-intensity="1"
+      shadow-softness="1"
+      poster="./assets/thumbnails/robotech.png"
+    >
+      <button
+        slot="ar-button"
+        style="
+          background-color: white;
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          border: none;
+        "
+      >
+        Ver en AR
+      </button>
+      <button
+        onClick="alert('Ejemplo')"
+        class="Hotspot"
+        slot="hotspot-2"
+        data-position="-0.10131740276258319m 0.10486843212862917m 1.2152129169893384m"
+        data-normal="-1m 0m 0m"
+        data-visibility-attribute="visible"
+      >
+        <div class="HotspotAnnotation">Rueda</div></button
+      ><button
+        class="Hotspot"
+        slot="hotspot-3"
+        data-position="-0.46929150379094114m 0.6094081766061652m -2.167349512858849m"
+        data-normal="-0.03733341572918341m 0.984992154363843m -0.16851312088875306m"
+        data-visibility-attribute="visible"
+      >
+        <div class="HotspotAnnotation">Turbina</div>
+      </button>
+    </model-viewer>
+  </body>
+</html>
