@@ -7,6 +7,7 @@
     "dev": "nodemon ./src/index.js",
     "start": "node ./src/index.js"
   },
+  "heroku-run-build-script": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/emlabollita/node-model-viewer.git"
