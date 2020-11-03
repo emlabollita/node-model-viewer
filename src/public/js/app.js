@@ -1,4 +1,4 @@
-const buttons = document.querySelectorAll("button");
+/*const buttons = document.querySelectorAll("button");
 
 buttons[1].addEventListener("click", function () {
   alert("button 1");
@@ -12,4 +12,4 @@ buttons.forEach(function (item) {
 
 function ButtonC(nombre) {
   alert("ejemplo de funcion" + nombre);
-}
+}*/
