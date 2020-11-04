@@ -6,16 +6,16 @@ router.get("/", (req, res) => {
     title: "Catalogo de muebles",
     products: [
       {
-        id: "1", title: "Silla 1", thumbnail: "sillon-02.png", modelAndroid: "sillon-01.gltf", modelIos: "", info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", buttons:
+        id: "1", title: "Silla 1", thumbnail: "sillon-02.png", modelAndroid: "sillon-01.glb", modelIos: "", info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", buttons:
           [{
-            idButton: "1", text: "Soporte", dataPosition:
-              ["-0.8828091980213141m", "0.5879172750624077m", "0.22041062782930054m"],
-            dataNormal: ["0.2478205458794466m 0.9681063172049637m 0.03681216684542619m"]
+            idButton: "1", text: "Madera", dataPosition:
+              ["0.05417077966798953m", "0.3046349489374933m", "0.2583084345562832m"],
+            dataNormal: ["0.675519902354402m 0.2826770428326241m 0.6810040755961024m"]
           },
             {
-              idButton: "2", text: "Soporte", dataPosition:
-                ["-0.8828091980213141m", "0.5879172750624077m", "0.22041062782930054m"], dataNormal:
-                ["0.2478205458794466m 0.9681063172049637m 0.03681216684542619m"]
+              idButton: "2", text: "Cuero", dataPosition:
+                ["-0.1291145096661018m", "0.8057702221087616m", "-0.17824237023610806m"], dataNormal:
+                ["0.6860421577973785m 0.4006422184164277m 0.6073153798044969m"]
             }]
       },
       {

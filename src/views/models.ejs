@@ -1,7 +1,12 @@
 <model-viewer class="model" src=<%="./assets/models/glb/" + product.modelAndroid %>
-  ios-src=<%="./assets/models/usdz/" + product.modelIos %> auto-rotate camera-controls
-  ar skybox-image="./assets/img/spruit_sunrise_1k_HDR.hdr" shadow-intensity="1"
-  shadow-softness="1" poster=<%="./assets/thumbnails/" + product.thumbnail %> >
+  ios-src=<%="./assets/models/usdz/" + product.modelIos %> 
+  auto-rotate camera-controls
+  ar 
+  skybox-image="./assets/img/spruit_sunrise_1k_HDR.hdr" 
+  shadow-intensity="1"
+  shadow-softness="1" 
+  poster=<%="./assets/thumbnails/" + product.thumbnail %> 
+  >
   <button
     slot="ar-button"
     style="
