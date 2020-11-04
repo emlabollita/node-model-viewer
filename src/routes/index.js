@@ -6,7 +6,7 @@ router.get("/", (req, res) => {
     title: "Catalogo de muebles",
     products: [
       {
-        id: "1", title: "Silla 1", thumbnail: "sillon-02.png", modelAndroid: "sillon-01.glb", modelIos: "", info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", buttons:
+        id: "1", title: "Silla 1", thumbnail: "sillon-01.png", modelAndroid: "sillon-01.glb", modelIos: "", info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", buttons:
           [{
             idButton: "1", text: "Madera", dataPosition:
               ["0.05417077966798953m", "0.3046349489374933m", "0.2583084345562832m"],
