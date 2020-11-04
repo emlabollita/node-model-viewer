@@ -1,7 +1,7 @@
 <model-viewer class="model" src=<%="./assets/models/glb/" + product.modelAndroid %>
   ios-src=<%="./assets/models/usdz/" + product.modelIos %> auto-rotate camera-controls
   ar skybox-image="./assets/img/spruit_sunrise_1k_HDR.hdr" shadow-intensity="1"
-  shadow-softness="1" poster="./assets/thumbnails/robotech.png" >
+  shadow-softness="1" poster=<%="./assets/thumbnails/" + product.thumbnail %> >
   <button
     slot="ar-button"
     style="
@@ -14,28 +14,20 @@
   >
     Ver en AR
   </button>
-  <button
-    data-toggle="modal" 
-    data-target="#arModal"
-    class="Hotspot"
-    slot="hotspot-2"
-    data-position="-0.10131740276258319m 0.10486843212862917m 1.2152129169893384m"
-    data-normal="-1m 0m 0m"
-    data-visibility-attribute="visible"
-  >
-    <div class="HotspotAnnotation">Rueda</div></button
-  ><button
-    data-toggle="modal" 
-    data-target="#arModal"
-    class="Hotspot"
-    slot="hotspot-3"
-    data-position="-0.46929150379094114m 0.6094081766061652m -2.167349512858849m"
-    data-normal="-0.03733341572918341m 0.984992154363843m -0.16851312088875306m"
-    data-visibility-attribute="visible"
-  >
-    <div class="HotspotAnnotation">Turbina</div>
-  </button>
 
+  <% for(var i=0; i< product.buttons.length;i++){ %>
+    <button 
+      data-toggle="modal" 
+      data-target="#arModal"
+      class="Hotspot" 
+      slot=<%= "hotspot-"+product.buttons[i].idButton %> 
+      data-position="<%= product.buttons[i].dataPosition[0] %> <%= product.buttons[i].dataPosition[1] %> <%= product.buttons[i].dataPosition[2] %>" 
+      data-normal="<%= product.buttons[i].dataNormal[0] %> <%= product.buttons[i].dataNormal[1] %> <%= product.buttons[i].dataNormal[2] %>"
+      data-visibility-attribute="visible">
+      <div class="HotspotAnnotation"><%= product.buttons[i].text %></div>
+    </button>
+  <% } %>
+  
   <!-- Modal -->
   <div class="modal fade" id="arModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
