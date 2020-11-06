@@ -2,7 +2,15 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  res.render("index", {
+  res.render("index", {title:"Seleccionar AR"});
+});
+
+router.get("/arjs-nft-marker", (req, res) => {
+  res.render("arjs-nft-marker", {title:"ARJS"});
+});
+
+router.get("/model-viewer", (req, res) => {
+  res.render("model-viewer", {
     title: "Catalogo de muebles",
     products: [
       {
@@ -41,16 +49,6 @@ router.get("/", (req, res) => {
                   ["-0.0038532531381694495m -0.0018840971398487152m 0.9999908012668022m"]
             }]
       },
-    ],
-  });
-});
-
-router.get("/contact", (req, res) => {
-  res.render("contact", {
-    title: "Sección de contacto",
-    products: [
-      { id: "3", title: "Silla 3", modelAndroid: "modelo.gltf", modelIos:"" },
-      { id: "4", title: "Silla 4", modelAndroid: "modelo.gltf", modelIos:"" },
     ],
   });
 });

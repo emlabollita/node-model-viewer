@@ -3,11 +3,10 @@
   <body>
     <main role="main">
       <div class="container">
-        <div class="row">
-          <% for(var i=0; i< products.length;i++){ %>
-            <%- include('models',{product:products[i]}) %> 
-          <% } %>
-        </div>
+        <a href="/model-viewer">Model Viewer</a>
+        <a href="/arjs-nft-marker">AR JS Marker</a>
+        <a href="/arjs-location">AR JS Location</a>
+        <a href="/simple-marker">AR JS Simple Marker</a>
       </div>
     <%- include('partials/footer') %>
     </main>
