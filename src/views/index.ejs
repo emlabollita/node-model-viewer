@@ -1,8 +1,15 @@
-<html>
+<html lang="en">
   <%- include('partials/header') %>
   <body>
-    <% for(var i=0; i< products.length;i++){ %> <%-
-    include('models',{product:products[i]}) %> <% } %> <%-
-    include('partials/footer') %>
+    <main role="main">
+      <div class="container">
+        <div class="row">
+          <% for(var i=0; i< products.length;i++){ %>
+            <%- include('models',{product:products[i]}) %> 
+          <% } %>
+        </div>
+      </div>
+    <%- include('partials/footer') %>
+    </main>
   </body>
 </html>
