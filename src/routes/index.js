@@ -2,16 +2,21 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  res.render("index", {title:"Seleccionar AR"});
+  res.render("index", {title:"Seleccionar AR", library:"none", inc:"none"});
 });
 
-router.get("/arjs-nft-marker", (req, res) => {
-  res.render("arjs-nft-marker", {title:"ARJS"});
+router.get("/aframe-arjs-nft-marker", (req, res) => {
+  res.render("aframe-arjs-nft-marker", {title:"ARJS", library:"aframe",  inc:"nft"});
+});
+
+router.get("/aframe-arjs-location", (req, res) => {
+  res.render("aframe-arjs-location", { title: "Location", library:"aframe",  inc:"location"});
 });
 
 router.get("/model-viewer", (req, res) => {
   res.render("model-viewer", {
     title: "Catalogo de muebles",
+    library:"modelviewer", 
     products: [
       {
         id: "1", title: "Silla 1", thumbnail: "sillon-01.png", modelAndroid: "sillon-01.glb", modelIos: "",
