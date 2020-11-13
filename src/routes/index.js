@@ -10,7 +10,11 @@ router.get("/aframe-arjs-nft-marker", (req, res) => {
 });
 
 router.get("/aframe-arjs-location", (req, res) => {
-  res.render("aframe-arjs-location", { title: "Location", library:"aframe",  inc:"location"});
+  res.render("aframe-arjs-location", { title: "Location", library: "aframe", inc: "location", locations:[
+    { lat: "-34.7756439", lon: "-58.3974032", text: "Estacion Temperley" },
+    { lat: "-34.7779652", lon: "-58.4046111", text: "Claudio" },
+    {lat:"-34.7777582",lon:"-58.4038172",text:"Smalorf"}
+  ]});
 });
 
 router.get("/model-viewer", (req, res) => {

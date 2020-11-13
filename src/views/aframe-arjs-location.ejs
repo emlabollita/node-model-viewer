@@ -3,15 +3,17 @@
   <body>
     <a-scene vr-mode-ui="enabled: false" renderer='antialias: true; alpha:true'
         arjs='videoTexture: true; sourceType: webcam; debugUIEnabled: false'>
-        <a-camera id='camera1' near="0.1" far="50000" fov="80"
-            gps-camera='simulateLatitude: 51.049; simulateLongitude: -0.723'
-            rotation-reader vertical-controls wasd-controls="acceleration: 1300">
+        <a-camera gps-camera-position gps-camera-rotation gps-camera rotation-reader>
         </a-camera>
-
         
-        <a-box gps-entity-place='latitude: -34.7779384; longitude: -58.4050859' material='color: yellow'
-            position='0 90 0' scale='10 10 10'>
-        </a-box>
+        <% for(var i=0; i< locations.length;i++){ %>
+            <!--<a-text font="kelsonsans" look-at="[gps-camera]" scale="50 50 50" value="<%= locations[i].text %>" width="6" gps-entity-place="latitude: <%= locations[i].lat %>; longitude: <%= locations[i].lon %>;"></a-text>-->
+            
+            <a-entity gltf-model="./assets/models/arjs/CesiumMan.glb" animation-mixer scale="50 50 50" gps-entity-place="latitude: <%= locations[i].lat %>; longitude: <%= locations[i].lon %>;"></a-text>
+
+        <% } %>
+        
+    
     </a-scene>
 </body>
 </html>
