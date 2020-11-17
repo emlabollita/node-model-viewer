@@ -4,16 +4,32 @@
     <a-scene vr-mode-ui="enabled: false" renderer='antialias: true; alpha:true'
         arjs='videoTexture: true; sourceType: webcam; debugUIEnabled: false'>
         <a-camera gps-camera-position gps-camera-rotation gps-camera rotation-reader>
+            <a-cursor></a-cursor>
         </a-camera>
         
         <% for(var i=0; i< locations.length;i++){ %>
-            <!--<a-text font="kelsonsans" look-at="[gps-camera]" scale="50 50 50" value="<%= locations[i].text %>" width="6" gps-entity-place="latitude: <%= locations[i].lat %>; longitude: <%= locations[i].lon %>;"></a-text>-->
             
-            <a-entity gltf-model="./assets/models/arjs/CesiumMan.glb" animation-mixer scale="50 50 50" gps-entity-place="latitude: <%= locations[i].lat %>; longitude: <%= locations[i].lon %>;"></a-text>
+            <a-entity class="refresh-button" look-at="[gps-camera]" scale="50 50 50" gps-entity-place="latitude: <%= locations[i].lat %>; longitude: <%= locations[i].lon %>;"><a-text font="kelsonsans" value="<%= locations[i].text %>" width="6"></a-text></a>
 
         <% } %>
         
     
     </a-scene>
+    
+    <script>
+        let buttons = document.querySelectorAll('.refresh-button');
+
+        for (let i = 0; i < buttons.length; i++) {
+
+            console.log("asdasdasdasd");
+
+            buttons[i].addEventListener("click", function() {
+                //cbox[i].classList.toggle("red");
+                
+                alert("asdasdasas");
+            });
+        }
+        
+    </Script>
 </body>
 </html>
