@@ -1,5 +1,8 @@
 { 
-    "title": "Location", "library": "aframe", "inc": "location", "locations":[
+    "title": "Location", 
+    "library": "aframe", 
+    "inc": "location", 
+    "locations":[
     { "lat": "-34.7756439", "lon": "-58.3974032", "text": "Estacion Temperley" },
     { "lat": "-34.7779652", "lon": "-58.4046111", "text": "Claudio" },
     {"lat":"-34.7777582","lon":"-58.4038172","text":"Smalorf"}
