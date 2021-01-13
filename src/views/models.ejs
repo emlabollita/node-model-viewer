@@ -5,7 +5,7 @@
       ios-src=<%="./assets/models/usdz/" + product.modelIos %> 
       auto-rotate camera-controls
       ar 
-      skybox-image="./assets/img/spruit_sunrise_1k_HDR.hdr" 
+      environment-image="aircraft_workshop_01_1k.hdr"
       shadow-intensity="1"
       shadow-softness="1" 
       poster=<%="./assets/thumbnails/" + product.thumbnail %> 
@@ -22,24 +22,7 @@
       >
         Ver en AR
       </button>
-    
-      <% for(var i=0; i< product.buttons.length;i++){ %>
-        <button 
-          data-toggle="modal" 
-          data-target="#arModal"
-          class="Hotspot" 
-          slot=<%= "hotspot-"+product.buttons[i].idButton %> 
-          data-position="<%= product.buttons[i].dataPosition[0] %> <%= product.buttons[i].dataPosition[1] %> <%= product.buttons[i].dataPosition[2] %>" 
-          data-normal="<%= product.buttons[i].dataNormal[0] %> <%= product.buttons[i].dataNormal[1] %> <%= product.buttons[i].dataNormal[2] %>"
-          data-visibility-attribute="hidden">
-          <div class="HotspotAnnotation"><%= product.buttons[i].text %></div>
-        </button>
-      <% } %>
-      
-      <!-- Modal -->
-      <%- include('partials/product-modal',{modal:product.info}) %>
-      <!-- Modal -->
-    
+  
     </model-viewer>
     <div class="card-body">
       <p class="card-text"><%= product.info.message %></p>

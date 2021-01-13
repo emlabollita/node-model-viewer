@@ -20,7 +20,7 @@ router.get("/aframe-arjs-marker", (req, res) => {
   res.render("aframe-marker",{title:"Marker", library:"aframe",  inc:"marker"} );
 });
 
-router.get("/model-viewer", (req, res) => {
+router.get("/sakura-ar", (req, res) => {
   const jsonElement = JSON.parse(fs.readFileSync(path.join(__dirname,'modelviewer.json'), 'utf8'));
   res.render("model-viewer", jsonElement);
 });
