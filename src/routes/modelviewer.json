@@ -7,7 +7,7 @@
         "id": "1", 
         "title": "Set de Baño", 
         "thumbnail": "poster.png", 
-        "modelAndroid": "SetBano_ScaledDown_002.glb", 
+        "modelAndroid": "SetBano_Rescaled.glb", 
         "modelIos": "",
         "info": {
             "title": "",
