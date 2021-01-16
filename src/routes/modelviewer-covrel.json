@@ -8,7 +8,7 @@
         "title": "Set de Baño", 
         "thumbnail": "poster-covrel.png", 
         "modelAndroid": "auto.glb", 
-        "modelIos": "",
+        "modelIos": "auto.usdz",
         "info": {
             "title": "",
             "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
