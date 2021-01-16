@@ -3,8 +3,13 @@ const path = require("path");
 const fs = require('fs');
 const router = express.Router();
 
-router.get("/", (req, res) => {
+/*router.get("/", (req, res) => {
   res.render("index", {title:"Seleccionar AR", library:"none", inc:"none"});
+});*/
+
+router.get("/", (req, res) => {
+  const jsonElement = JSON.parse(fs.readFileSync(path.join(__dirname,'modelviewer-covrel.json'), 'utf8'));
+  res.render("model-viewer", jsonElement);
 });
 
 router.get("/aframe-arjs-nft-marker", (req, res) => {
