@@ -25,4 +25,9 @@ router.get("/sakura-ar", (req, res) => {
   res.render("model-viewer", jsonElement);
 });
 
+router.get("/covrel-ar", (req, res) => {
+  const jsonElement = JSON.parse(fs.readFileSync(path.join(__dirname,'modelviewer-covrel.json'), 'utf8'));
+  res.render("model-viewer", jsonElement);
+});
+
 module.exports = router;
